@@ -17,8 +17,6 @@ description: 为月明水清深生成或修改宇航员 IP 手绘线稿配图。
 
 - 生成前读取 [references/identity-and-style.md](references/identity-and-style.md)，用 `view_image` 查看角色及已确认线稿参考。通过 `image_gen` 的参考图参数传入，不能只靠文字猜角色。
 - 白色圆润宇航服，圆形头盔、黑色面罩，面罩中央绿色 C／月牙标记，胸部与腕部少量绿标。宇航服内部留白，用少量不规则细线表现接缝，细节密度以已确认线稿参考为准。
-- 角色身上的绿色 C 标记属于 IP 识别，保留；画面里的彩色短批注用品牌铜橙 `#9B4F2C` 为主、深蓝 `#182B42` 为辅（见 `moonlit-content-engine/references/brand-tokens.md`），不用绿色做批注或强调。
-- 定位：插画系列角色，用于线稿正文图和用户本期明确要求的品牌叙事图；不作为封面、视频舞台或信息图的默认主语。
 - 从写实参考中只取角色身份。不要带入参考的场景、光影、材质、机械背景或三维渲染。绿色标记用平涂表现，不发光。
 - 默认横向 16:9；用户指定其他画幅时遵从。白底不加纹理、渐变。按角色数量、解释任务和使用尺寸分配主体与留白；多人协作不要为留白把角色缩到难以辨认。
 - 文字只包含观众理解动作与关系所需的内容，不写“母稿配图”“文章核心问题”“演示第几幕”等制作说明。文字通常 0–4 处，每处 2–8 个汉字。黑色用于线稿；绿色优先保留给角色；橙色可提示动作方向，红色强调结果，蓝色补充说明。无需每张使用所有颜色。
@@ -38,7 +36,7 @@ description: 为月明水清深生成或修改宇航员 IP 手绘线稿配图。
 
 ## 保存
 
-以作品 `production/illustrations/visual-manifest.json` 为共享素材清单；发布器需要的文章 `assets/visual-manifest.json` 是从共享清单导出的使用清单，不是第二份素材事实源。资产文件只保存一份，消费者引用确定版本。
+以作品 `production/illustrations/visual-manifest.json` 为共享素材清单；文章目录下的使用清单 `<文章目录>/assets/visual-manifest.json`（运行时产物，不随本包）是从共享清单导出的，不是第二份素材事实源。资产文件只保存一份，消费者引用确定版本。
 
 在 Moonlit Creator 中沿用当前作品；新命题按 `WORKSPACE-SPEC.md` 建作品。生成图与提示词保存到作品 `production/illustrations/`，更新 `work.json` 和 `works/index.json`。旧版本需保留时移至作品 `archive/`。用户确认的图才可进入 `deliverables/`。
 
